@@ -68,6 +68,167 @@
         define("CONSTANTE", 50);
         echo "<br />". "constante: ". CONSTANTE;
 
+        // null e empty.
+        $varN1 = NULL;
+        $varN2 = "0";
+        echo "<br />". is_null($varN1);
+        echo empty($varN2); // empty é uma função que interpreta o null, 0 e "" como valores vazios.
+        
+        $foo = "0";
+        echo "<br />". gettype($foo); //string
+        $foo += 2;
+        echo "<br />". gettype($foo); //inteiro
+        $foo = $foo + 2.5;
+        echo "<br />". gettype($foo); //float
+        $foo = 5 + "10 carros";
+        echo $foo. "-". gettype($foo);
+        settype($foo, "string");
+        echo "=>". gettype($foo). "-". $foo. gettype((integer) $foo); // ao declarar da última forma o valor é atribuído somente naquela linha.
+
+
+        // if e else
+        $idade = 30;
+        if ($idade < 30) { // chave não é obrigatória, mas ajuda a organizar o código.
+            echo "Você é jovem.";
+        }
+        elseif ($idade = 30) {
+            echo "Você tem 30 anos.";
+        }
+        else {
+            echo "Você é velho.";
+        }
+
+        // Operador "diferente" => "<>". Operador "não igual" => "!=".
+        $x = 10;
+        $y = 20;
+        $z = 30;
+        $n = 40;
+        if(($x < $y) && ($z < $n)) {
+            echo "X é menor que Y E Z é menor que N.";
+            echo "<br />";
+        }
+        if(($x < $y) || ($z < $n)) {
+            echo "X é menor que Y OU Z é menor que N.";
+        }
+        if(!isset($usuario)) { // "!" => negação.
+            $usuario = "Gustavinho";
+        }
+
+        // switch.
+        $contato = 'celular';
+
+        switch ($contato) {
+            case 'celular': // para ambos os casos o resultado na tela é o mesmo.
+            case 'telefone':
+                echo "<br />". "Contato via telefone.";
+                break;
+            case 'e-mail':
+                echo "<br />". "Contato via e-mail.";
+                break;
+            default: // é o código executado caso nenhum dos casos acima for verdadeiro.
+                echo "<br />". "Contato não definido.";
+                break;
+        }
+
+        // while.
+        $i = 0;
+
+        while ($i <= 100) {
+            echo $i. " ";
+            $i += 1;
+        }
+
+        // for.
+        for ($i = 0; $i <= 100; $i++)
+            echo $i. " ";
+        
+        // foreach.
+        $numeros2 = [1,2,3,4,5,6,7,8,9];
+        echo "<br />";
+
+        foreach ($numeros2 as $numero2) {
+            echo "Número atual: ". $numero2;
+            echo "<br />";
+        }
+        $meses = ["1" => "Janeiro",
+        "2" => "Fevereiro",
+        "3" => "Março",
+        "4" => "Abril",
+        "5" => "Maio",
+        "6" => "Junho",
+        "7" => "Julho",
+        "8" => "Agosto",
+        "9" => "Setembro",
+        "10" => "Outubro",
+        "11" => "Novembro",
+        "12" => "Dezembro"];
+
+        foreach ($meses as $numero => $mes) {
+            echo "Mês $numero é $mes.";
+            echo "<br />";
+        }
+
+        // break e continue.
+        for ($i=0; $i<=10; $i++) {
+            if ($i == 5) {
+                continue; // pula para o próximo elemento. (break funciona da mesma forma q no Python.)
+            }
+            echo $i. " ";
+        }
+
+        // funções.
+
+        function chamar_atencao($vitima) {
+            echo "<br />". "Ei, $vitima, ATENÇÃO.";
+        }
+
+        chamar_atencao("Gustavo");
+        chamar_atencao("André");
+
+        function viajar($pessoa, $destino, $data) { // multiplos argumentos. (pode ser passado um argumento NULL)
+            echo "<br />";
+            echo "$pessoa vai viajar para $destino no dia $data.";
+        }
+
+        $d2345678 = "08/03/2023";
+        viajar("Gustavo", "São Thomé das Letras", $d2345678);
+
+        function soma($valor1, $valor2) {
+            $resultado = $valor1 + $valor2;
+            return $resultado; // return.
+        }
+
+        $total = soma(11,13);
+        echo "<br />". $total;
+
+        // Escopo de variáveis.
+
+        $escopo = "global";
+
+        function mudar_escopo() {
+            global $escopo; // uma variável atribuída dentro de uma função tem valor "local". Portanto é necessário atribuir um valor "global" para usa-la no restante do código.
+            $escopo = "local";
+        }
+
+        echo "<br />";
+        echo $escopo;
+        echo "<br />";
+        mudar_escopo();
+        echo $escopo;
+
+        // Argumentos padrões.
+
+        function criar_usuario($usuario="anônimo", $senha="1234") { // valores atribuídos aos argumentos caso sejam omitidos.
+            // código de criação do usuário...
+            return "Usuário: {$usuario} e Senha: {$senha} definidos com sucesso.";
+        }
+
+        echo "<br />". criar_usuario("Andrezinho", "jooj123");
+        echo "<br />". criar_usuario();
+
+        
+
+
 
     ?>
 </body>
