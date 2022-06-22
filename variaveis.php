@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Variáveis</title>
+
+    <meta name="description" content="Aprendendo PHP">
+    <meta name="author" content="Gustavo Monteiro Laperriere">
+
+    <title>Estudos PHP</title>
 </head>
 <body>
     <?php
@@ -225,8 +229,26 @@
 
         echo "<br />". criar_usuario("Andrezinho", "jooj123");
         echo "<br />". criar_usuario();
-
         
+        // debug.
+
+        echo "<br />";
+        var_dump($escopo); // assim como o "gettype", mostra o tipo de variável, e o valor contido.
+        echo "<br />";
+
+        echo "<pre>"; // pré-formatado. Conserva a estrutura, espaços e fonte.
+        print_r(get_defined_vars()); // mostra todas as variáveis do código.
+        echo "</pre>";
+
+        echo "<br />";
+
+        function ola($pessoa, $scr777=NULL) {
+            echo "Olá {$pessoa}{$scr777}.";
+            echo "<br />";
+            var_dump(debug_backtrace()); // "traço de volta".
+        }
+
+        ola("Jorginho", ", Antônio"); // caso não seja atribuído o segundo valor, o array recebe valor nulo, portanto é tratado como se existisse apenas uma variável.
 
 
 
