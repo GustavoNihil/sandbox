@@ -11,6 +11,28 @@
     <title>Estudos PHP</title>
 </head>
 <body>
+
+    <style>
+        #link-topo {
+            text-decoration: none;
+            color: white;
+            background-color: rgb(182, 3, 107);
+            padding: 4px;
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+        }
+        #link-jooj {
+            text-decoration: none;
+            color: white;
+            background-color: rgb(182, 3, 107);
+            padding: 4px;
+            position: fixed;
+            left: 10px;
+            bottom: 10px;
+        }
+    </style>
+    <div id="inicio">
     <?php
         $nome = 'Gustavo';
         $sobrenome = 'Laperriere';
@@ -250,8 +272,96 @@
 
         ola("Jorginho", ", Antônio"); // caso não seja atribuído o segundo valor, o array recebe valor nulo, portanto é tratado como se existisse apenas uma variável.
 
+        /*
+        WWW (World Wide Web): faz requisição de hipertexto para o servidor.
+        - Ao digitar uma URL (Uniform Resources Locator) - garante um endereço único à página - ela é transformada em um enderço IP, que localiza um banco de dados da internet por meio de DNS (Domain Name System).
+        - O navegador estabelece uma conexão TCP-IP com o servidor. Por sua vez é requisitado um HTTP (Hypertext Transfer Protocol) - protocolo de comunicação entre navegador e servidor.
+        - A requisição em HTTP por sua vez é convertida em HTML.
+
+        Cookies: Basicamente ele é um grupo de dados trocados entre o servidor de páginas e o navegador colocado em um ficheiro criado no computador do usuário.
+        - Domain - de onde vem o Cookie.
+        - Path - parte da árvore de arquivos do servidor que podem usar o cookie (frequentemente têm o símbolo "/", que representa toda a árvore).
+        - Content - utiliza a forma "nome=valor", o servidor pode definir o nome e o valor como quises. é nele que fica armazenado o conteúdo do cookie.
+        - Expires - Campo que faz o cookie persistir. Nele contêm a data e horário. Caso não seja informado, o navegador descartará automaticamente após o término da sessão.
+        - Secure - Define se é seguro ou não.
+            É utilizado para que sejam mantidas configurações de um usuário, assim como senhas e ítens adicionados em um carrinho de compras.
+        */
 
 
-    ?>
+    ?></div>
+
+
+    <!--Teste de links internos-->
+    <div id="jooj">Jooj-Jooj-Jooj-Jooj.</div>
+    <div>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+        lol <br>
+    </div>
+
 </body>
+<footer>
+    <a id="link-topo" href="#inicio">&#9650;</a>
+    <a id="link-jooj" href="#jooj">JOOJ</a>
+
+    <!--Importando biblioteca de funções Jquery-->
+    <script type="text/javascript" src="rolagem_links_internos/jquery-3.1.1.min.js"></script>
+    <!--fazer link de um documento externo JS a um documento HTML-->
+    <script type="text/javascript" src="rolagem_links_internos/links_internos.js"></script>
+
+</footer>
 </html>
