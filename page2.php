@@ -13,7 +13,9 @@
         // por questões de segurança o GET é utilizado apenas para informações públicas.
         print_r($_GET); // "&" para fazer mais atribuições ao array.
         $id = $_GET["id"]; // variável $id está recebendo o valor de "id" do array da URL.
+        $name = $_GET["name"];
         echo "<br />". $id;
+        echo "<br />". $name;
     ?>
     <p>Bem vindo à Segunda Página.
     

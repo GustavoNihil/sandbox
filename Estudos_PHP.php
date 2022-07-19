@@ -1,3 +1,7 @@
+<?php
+    header("HTTP 1.1 / 404 Not Found");
+?>
+<!--Cabeçalho do protocolo HTTP deve ser declarado antes de qualquer elemento HTML.-->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -287,69 +291,12 @@
             É utilizado para que sejam mantidas configurações de um usuário, assim como senhas e ítens adicionados em um carrinho de compras.
         */
 
-
     ?></div>
 
 
     <!--Teste de links internos-->
     <div id="jooj">Jooj-Jooj-Jooj-Jooj.</div>
     <div>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
-        lol <br>
         lol <br>
     </div>
 
